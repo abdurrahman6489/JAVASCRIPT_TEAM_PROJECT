@@ -1,0 +1,109 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+:root{
+    --hue:200;
+    --saturation:50%;
+    --foreground-color:hsl(var(--hue),var(--saturation),75%);
+    --background-color:hsl(var(--hue),var(--saturation),20%);
+}
+body{
+    margin:0;
+    background-color: var(--background-color);
+    overflow: hidden;
+
+}
+.paddle{
+    --position:50;
+    --height:10;
+    position: absolute;
+    background-color: var(--foreground-color);
+    top:calc(var(--position)*1vh);
+    transform:translateY(-50%);
+    height:calc(var(--height)*1vh);
+    width:1vh;
+    border-radius:2vh;
+}
+.paddle.left{
+    left:1vw;
+}
+.paddle.right{
+    right:1vw;
+}
+.ball{
+    --x:50;
+    --y:50;
+    --size:3;
+    position: absolute;
+    background-color: var(--foreground-color);
+    left:calc(var(--x)*1vw);
+    top:calc(var(--y)*1vh);
+    transform:translate(-50%,-50%);
+    height:calc(var(--size)*1vh);
+    width:calc(var(--size)*1vh);
+    border-radius:50%;
+}
+.score{
+    display:flex;
+    justify-content: center;
+}
+.score > *{
+    font-weight:bold;
+    color:var(--foreground-color);
+    flex-grow:1;
+    flex-basis:0;
+    font-size:4vh;
+    padding:0 2vh;
+    margin:1vh 0;
+    opacity:0.5;
+}
+.score > :first-child{
+    text-align: right;
+    border-right:0.4vh solid var(--foreground-color);
+}
+.start{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(1);
+    transition: 200ms ease-in-out;
+    border:1px solid yellow;
+    background-color: black;
+    border-radius:8px;
+    padding:8px;
+    z-index: 10;
+    width:20%;
+    height:10%;
+    max-width: 30%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.start.hide{
+    transform: translate(-50%,-50%) scale(0);
+}
+#overlay{
+    position: fixed;
+    opacity:1;
+    transition: 200ms ease-in-out;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: rgba(0,0,0,0.5);
+    /* background-color: white; */
+    pointer-events:all;
+}
+#startBtn{
+    background-color: yellow;
+    color:red;
+    height:80%;
+    width:80%;
+    border-radius:8px;
+    border:none;
+    font-size: 1.25rem;
+}
+#overlay.hide{
+    opacity:0;
+    pointer-events:none;
+}
