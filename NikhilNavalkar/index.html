@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Number Guess Game</title>
+</head>
+
+<body onload="init()">
+    <main>
+
+        <!-- <div id="section1" class="container">
+            <div class="game">
+                <p>Number Guess Game</p>    
+            </div>
+            
+            <button class="btn btn-danger btn-lg mt-4" onclick="playnow_btn_click()"> <b>Play now</b></button><br><br><br>
+            <p><b>Guessing games help your kid to think about numbers, their approximations and various combinations. You can
+                <br>start off with simple numerical exercises and then move on to solving complicated math problems. A
+                proper<br>workout to the brain can be ensured through guessing games.</b>
+            </p>    
+        </div>      -->
+
+
+        <div id="welcomeScreen">
+            <h2>Guess The Random Number Between 1-100</h2>
+            <img src="https://media.tenor.com/PxWtUNosz-0AAAAM/hummm-my.gif" alt="logo" />
+
+            <section class="eventSection">
+                <p>Select The Difficulty</p>
+                <div class="button-wrapper">
+                    <button onclick="easyMode()">Easy: 10 attempts</button>
+                    <button onclick="hardMode()">Hard: 5 attempts</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- -------------actual game area -->
+        <div id="gameArea">
+            <div id="newGameButton">
+                <button onclick="newGamebegin()">New Game</button>
+            </div>
+            <section>
+                <h3 id="textOutput">Your Guess</h3>
+                <input type="number" id="inputBox" min="1" max="100" onchange="compareGuess()"
+                    placeholder="Enter Your Number" onchange="compareGuess()" />
+            </section>
+
+            <section class="stats">
+                <div class="info">
+                    <p>Number of previous attempts</p>
+                    <span id="attempts"><b>0</b></span>
+                </div>
+                <div class="info">
+                    <p>Number of previous guesses</p>
+                    <span id="guesses"><b>0</b></span>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

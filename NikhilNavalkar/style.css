@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Moon+Dance&family=Sofia+Sans:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dark: #350363;
+    --background: #ffe9db;  
+}
+#welcomeScreen{
+    display: none;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "montserral", sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: #e7e5e9;
+}
+/* #section1{
+    background: url('https://webartdevelopers.com/blog/wp-content/uploads/2019/02/Pure-CSS-Animated-Background.gif');
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+    border-radius: 20px;
+    width: 600px;
+    height: 600px;
+    padding: 20px 20px;
+}
+.game{
+    font-size: 50rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+main{
+    width: 30vw;
+    text-align: center;
+    padding: 8rem 5rem;
+}
+h2{
+    font-size: 2rem;
+    margin: 1rem;
+}
+h3{
+    font-size: 3rem;
+}
+p{
+    font-size: 1.8rem;
+}
+img{
+    border-radius:50%
+}
+.button-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    margin-top: 1rem;   
+}
+button{
+    min-width: 28rem;
+    border-radius: 0.8rem;
+    border-style: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 1.5rem 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: rgba(0,0,0,0.25) 0 3px 8px;
+    transition: all 0.5s;
+    user-select: none;
+    background-color: #9d85df;
+    text-transform: capitalize;
+}
+button:hover{
+    box-shadow: rgba(80, 63, 205, 0.2) 0 1px 30px;
+    transition-duration: 0.1s;
+}
+button:last-child{
+    background: rgb(96, 96, 172);
+    margin-bottom: 0;
+}
+/* -------------------gameArea---- */
+#gameArea{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    border: 0.1rem solid lightgrey;
+    background: transparent;
+    margin: 1.5rem 0;
+    padding: 2rem 0;
+    width: 25rem;
+    text-align: center;
+}
+.starts{
+    text-align: left;
+    margin-bottom: 4rem;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;    
+}
+.info span{
+    font-size: 1.8rem;
+    color: red
+}
+
+/* ----------------for responsive--- */
+@media (max-width: 1200px){
+    body{
+        width: 100vw;
+    }
+    main{
+        width: 50vw;
+        padding: 2rem;
+    }
+    input{
+        width: 20rem;
+    }
+}
+
+@media (max-width: 800px){
+    body{
+        width: 100vw;
+    }
+    main{
+        width: 80vw;
+        padding: 2rem;
+    }
+    input{
+        width: 20rem;
+    }
+}
