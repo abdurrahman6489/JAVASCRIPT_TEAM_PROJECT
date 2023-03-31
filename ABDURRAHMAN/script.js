@@ -56,8 +56,8 @@ function Video(src, append) {
     }
     return v;
   }
-//   var video = new Video("./videorun.mp4", true);
-//   // do whatever you want...
+//   var video = new Video("", true);
+
 //   video.height = 280;
 //   video.width = 500;
 //   video.controls = "controls";
