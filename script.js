@@ -4,7 +4,8 @@ let gameAddresses =
     "../GauravKadam/index.html",
     "../ANANDRAJAARYAN/index.html",
     "../SACHINPATEL/index.html",
-    "../Durga Raghav/index.html"
+    "../Durga Raghav/index.html",
+    "../NikhilNavalkar/index.html"
 ]
 const game = document.querySelectorAll(".game");
 for(let i=0;i<game.length;i++){
