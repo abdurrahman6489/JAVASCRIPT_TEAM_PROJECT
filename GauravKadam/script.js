@@ -14,7 +14,7 @@ let secondCard = false;
 
 // Items Array
 const items = [
-    { name: "bee", image: "./assets/bee.jpg" },
+    { name: "car1", image: "./assets/car1.png" },
     { name: "car2", image: "./assets/car2.png" },
     { name: "car3", image: "./assets/car3.png" },
     { name: "car4", image: "./assets/car4.png" },
@@ -54,6 +54,7 @@ const movesCounter = () => {
     moves.innerHTML = `<span>moves:</span>${movesCount}`;
 };
 
+// pick random objects from  the item array
 const generateRandom = (size = 4) => {
     // temporary Array
     let tempArray = [...items];
@@ -76,6 +77,11 @@ const matrixGenerator = (cardValues, size = 4) => {
     // simple shuffle
     cardValues.sort(() => Math.random() - 0.5);
     for (let i = 0; i < size * size; i++) {
+        /*create cards
+        before =>frontside (contains question mark)
+        after =>back side (contains actual image)
+        data-card-values is a custom attribute which stores the name of cards to much letter\
+         */
         gameContainer.innerHTML += `
         <div class="card-container" data-card-value="${cardValues[i].name}">
             <div class="card-before">?</div>
@@ -103,25 +109,29 @@ const matrixGenerator = (cardValues, size = 4) => {
                     firstCardValue = card.getAttribute("data-card-value");
                 }
                 else {
+                    // increment moves since user selected second card
                     movesCounter();
                     // secondCard and value
                     secondCard = card;
                     let secondCardValue = card.getAttribute("data-card-value");
                     if (firstCardValue == secondCardValue) {
-                        // if both cards matched
+                        // if both cards match add matched class to thoes cards would be ignored next time
                         firstCard.classList.add("matched");
                         secondCard.classList.add("matched");
-
+                        // set first card to flase since next card be first now
                         firstCard = false;
-
+                        // wincount increase as userfound correct match
                         winCount += 1;
+                        // cheack if winCount == half of cardVakues
                         if (winCount == Math.floor(cardValues.length / 2)) {
+                            stopGame();
                             result.innerHtml = `<h2>You Won</h2>
                                 <h4>Moves: ${movesCount}</h4>`;
-                            stopGame();
+
                         }
                     } else {
-
+                        // if the cards dont match
+                        // flip the cards back to normal
                         let [tempFirst, tempSecond] = [firstCard, secondCard];
                         firstCard = false;
                         secondCard = false;

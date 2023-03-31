@@ -4,13 +4,15 @@
     box-sizing: border-box;
 }
 body{
-    background-color: orange;
+    background-image: url(./assets/bg2.webp);
+    overflow: hidden;
 }
 .wrapper{
     box-sizing: content-box;
     width: 26.87em;
     padding: 2.5em 3em;
-    background-color: #ffffff;
+    background-image: url(./assets/bg.jpg);
+    overflow: hidden;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -22,12 +24,12 @@ body{
     position: relative;
     width: 100%;
     display: grid;
-
     gap: 0.6em;
 }
 .stats-container{
     text-align: right;
     margin-bottom: 1.2em;
+    color: #ffffff;
 }
 .stats-container span{
     font-weight: 600;
@@ -37,7 +39,10 @@ body{
     width: 6.25em;
     height: 6.25em;
     cursor: pointer;
-
+}
+.card-container img{
+    width: 6.00em;
+    height: 6.00em;
 }
 .card-before,
 .card-after{
@@ -79,15 +84,18 @@ body{
     background-color: #f4c531;
     top: 0;
 }
-.controls-container,img{
-    width:6.6em;
-    height:6.6em;
-}
+
 button{
     border: none;
     border-radius: 0.3em;
     padding: 1em 1.5em;
     cursor: pointer;
+}
+#start{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 #stop{
     font-size: 1.1em;
@@ -105,6 +113,7 @@ button{
 }
 #result{
     text-align: center;
+    color: white;
 }
 #result h2{
     font-size: 2.5em;
