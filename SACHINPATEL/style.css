@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 #playerText{
-    color:rgb(190, 190, 190); 
+    color:rgb(255, 255, 255); 
     font-family: 'Press Start 2P', cursive;   
 }
 
@@ -28,7 +28,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(25, 101, 58);
+    background-color: rgb(33, 121, 71);
 }
 
 #gameboard {
@@ -49,27 +49,21 @@ h1 {
     border-bottom: 5px solid;
     font-family: 'Press Start 2P', cursive;   
 }
-/* change this 
- */
-.box:nth-child(3n) {
+.br-0{
     border-right: none;
 }
-.box:nth-child(6) ~ .box {
+.bb-0{
     border-bottom: none;
-} 
+}
 button {
     padding: 10px 20px;
     border-radius: 10px;
-    /* background-color: var(--orange); */
     color: #333;
-    /* border-color: var(--orange); */
     font-size: 18px;
-    /* transition: 200ms transform; */
     font-weight: 600;
 }
 button:hover {
     cursor: pointer;
-    /* transform: translateY(-2px); */
 }
 #restartBtn{
     font-family: 'Press Start 2P', cursive;   
