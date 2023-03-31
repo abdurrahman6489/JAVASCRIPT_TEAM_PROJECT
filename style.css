@@ -33,8 +33,6 @@ header{
     display:grid;
     grid-template:repeat(2,1fr)/repeat(3,1fr);
     gap:4%;
-    /* margin-left:2%;
-    margin-right:2%; */
     padding:3%;
 }
 .game{
@@ -43,7 +41,6 @@ header{
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
-    /* background-color: white; */
     border-radius:5%;
     padding:2%;
 }
