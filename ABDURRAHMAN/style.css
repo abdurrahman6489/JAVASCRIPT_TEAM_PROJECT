@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 *,*::after,*::before{
     box-sizing: border-box;
 }
@@ -95,15 +96,15 @@ body{
     pointer-events:all;
 }
 #startBtn{
-    background-color: yellow;
-    color:red;
+    background-color: black;
+    color:yellow;
     height:80%;
     width:80%;
     border-radius:8px;
-    border:none;
+    border:thin solid yellow;
     font-size: 85%;
-    /* font-family: 'Roboto', sans-serif; */
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', cursive;
 }
 #overlay.hide{
     opacity:0;

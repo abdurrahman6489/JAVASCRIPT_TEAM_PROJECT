@@ -44,6 +44,9 @@ header{
     border-radius:5%;
     padding:2%;
 }
+.game:hover{
+    border:thin solid yellow;
+}
 video{
     width:90%;
     height:85%;
