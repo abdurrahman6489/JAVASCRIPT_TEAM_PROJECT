@@ -1,4 +1,4 @@
-# JAVASCRIPT_TEAM_PROJECT
+# JAVASCRIPT TEAM PROJECT
 ## Project Name : - GAME ETERNITY
 ### This is a team Project on classical Game Development
 #### Tech Stack used are : - HTML, CSS, BootStrap, JavaScript
