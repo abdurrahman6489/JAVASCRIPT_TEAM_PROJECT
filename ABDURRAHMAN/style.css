@@ -3,6 +3,9 @@
     box-sizing: border-box;
 }
 :root{
+    /* hue and saturation are the variables so that all
+    the colors i.e. paddle, ball and the background should
+    change with time through JavaScript */
     --hue:200;
     --saturation:50%;
     --foreground-color:hsl(var(--hue),var(--saturation),75%);
@@ -12,9 +15,11 @@ body{
     margin:0;
     background-color: var(--background-color);
     overflow: hidden;
-
 }
 .paddle{
+    /* position and height are the variables which are
+    changed through JaavaScript so that paddles can move
+    in vertical direction and its height can be changed */
     --position:50;
     --height:10;
     position: absolute;
@@ -32,6 +37,9 @@ body{
     right:1vw;
 }
 .ball{
+    /* x and y are variables through which position of the ball is being
+    changed through JavaScript to move the ball with time, size can be used
+    to change the size of the ball */
     --x:50;
     --y:50;
     --size:3;
@@ -68,9 +76,6 @@ body{
     left:50%;
     transform: translate(-50%,-50%) scale(1);
     transition: 200ms ease-in-out;
-    /* border:1px solid yellow;
-    background-color: black;
-    border-radius:8px; */
     padding:8px;
     z-index: 10;
     width:20%;
@@ -92,7 +97,6 @@ body{
     left:0;
     right:0;
     background-color: rgba(0,0,0,0.5);
-    /* background-color: white; */
     pointer-events:all;
 }
 #startBtn{
