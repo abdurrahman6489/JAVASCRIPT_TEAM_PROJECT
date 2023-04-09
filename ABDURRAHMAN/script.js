@@ -63,7 +63,7 @@ function handleLose(){
 
 
 document.addEventListener("pointermove",e =>{
-    playerPaddle.position = (e.y / window.innerHeight) * 100;
+    playerPaddle.position = (e.clientY / window.innerHeight) * 100;
 })
 //this is for starting the gmae when start button in the middle
 //of the screen is clicked
